@@ -28,4 +28,8 @@ if(EQUALISER_BUILD_SAMPLES)
     add_executable(equaliser_c_sample samples/c_sample.c)
     target_link_libraries(equaliser_c_sample PRIVATE equaliser)
     set_target_properties(equaliser_c_sample PROPERTIES LINKER_LANGUAGE CXX)
+
+    add_executable(equaliser_wav_sample test.c)
+    target_link_libraries(equaliser_wav_sample PRIVATE equaliser)
+    set_target_properties(equaliser_wav_sample PROPERTIES LINKER_LANGUAGE CXX)
 endif()

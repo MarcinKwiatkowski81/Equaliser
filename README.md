@@ -57,5 +57,13 @@ cmake --build build
 ctest --test-dir build --output-on-failure
 ```
 
-The build produces `equaliser_cpp_sample` and `equaliser_c_sample`. Their
-sources are in `samples/`; C API and C++ behavior tests are in `tests/`.
+The build produces `equaliser_cpp_sample`, `equaliser_c_sample`, and
+`equaliser_wav_sample`. The first two sources are in `samples/`; the WAV tool
+is in `test.c`. Run it with an input and output path:
+
+```sh
+./build/equaliser_wav_sample input.wav output.wav
+```
+
+The WAV tool reads the sample rate from the input header and accepts mono,
+16-bit integer PCM WAV files. C API and C++ behavior tests are in `tests/`.
